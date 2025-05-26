@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrVote</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../Source/Stylesheets/Votaciones_stylesheet.css">
+
+</head>
+
+<body>
+
+    <img src="../assets/media/Exit.svg" class="exitimg" onclick="volver();">
+
+    <h1 class="e1" id="titulo"></h1>
+
+    <div class="button-container" id="partidosDiv"></div>
+
+    <div style="display: flex; justify-content: center;">
+        <button id="voteButton" class="vote-button" disabled onclick="submitVote()">Votar</button>
+    </div>
+
+    <h4 id="descripcion"></h4>
+
+    <p id="consoleR"></p>
+
+    <div id="message" class="message"></div>
+
+    <script src="../Source/Scripts/Votaciones_script.js"></script>
+
+</body>
+
+</html>

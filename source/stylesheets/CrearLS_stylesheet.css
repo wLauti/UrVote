@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'NormalFont';
+    src: url('../../Assets/fonts/NormalFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('../../Assets/fonts/LogoFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: "NormalFont", sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+h1 {
+    font-family: "NormalFont", sans-serif;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(182, 182, 182) 50%, rgb(155, 155, 155) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    font-family: "NormalFont", sans-serif;
+    background-color: transparent;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vmin;
+    text-align: center;
+    z-index: 1;
+}
+
+.menu-button {
+    font-family: "NormalFont", sans-serif;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #ececec, 0 0.0625em 0 0 #efefef, 0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede, 0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+}
+
+.menu-button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef, 0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede, 0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    z-index: 2;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

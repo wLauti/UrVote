@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'NormalFont';
+    src: url('../../Assets/fonts/NormalFont.ttf') format('truetype');
+}
+
+@media (max-width: 768px) {
+    img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+html,
+body {
+    font-family: "NormalFont", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    position: fixed;
+    background-image: linear-gradient(-60deg, rgb(182, 182, 182) 50%, rgb(155, 155, 155) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+section {
+    font-family: "NormalFont", sans-serif;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.25em;
+    padding: 10vmin;
+    z-index: 1;
+}
+
+button {
+    font-family: "NormalFont", sans-serif;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #242424;
+    border: 0;
+    width: 300px;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #ececec, 0 0.0625em 0 0 #efefef, 0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede, 0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+}
+
+button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef, 0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede, 0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #585858;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}

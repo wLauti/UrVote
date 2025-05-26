@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrVote</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../Source/Stylesheets/Resultados_stylesheet.css">
+
+</head>
+
+<body>
+
+    <h1 id="titulo"></h1>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Partido</th>
+                <th>Votos</th>
+                <th>Porcentaje</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tablabody"></tbody>
+
+    </table>
+
+    <canvas id="votingChart" class="dcanvas"></canvas>
+
+    <p>Presiona <b>Enter</b> para imprimir los resultados.</p>
+
+    <button class="menu-button" onclick="volver();">Volver al menu</button>
+
+    <script src="../Source/Scripts/Resultados_script.js"></script>
+
+</body>
+
+</html>

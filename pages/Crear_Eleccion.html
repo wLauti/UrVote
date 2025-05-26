@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrVote</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../Source/Stylesheets/Crear_Eleccion_stylesheet.css">
+
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <h1>Partidos</h1>
+
+    <button id="add-card-btn" class="add-button">+</button>
+    <div class="button-container" id="cards-container"></div>
+
+    <h1>Configuraciones de la votacion</h1>
+
+    <p>Personas que van a votar:</p>
+    <input type="number" min="1" max="100" placeholder="Numero aqui..." id="cantPersonas" class="input-style">
+
+    <br>
+
+    <p>Voto en blanco:</p>
+    <input type="checkbox" id="votoBlanco" class="input-style">
+
+    <br>
+
+    <p>Titulo:</p>
+    <input placeholder="Titulo aqui..." type="text" id="titulo" class="input-style" style="width: 30%;">
+
+    <br>
+
+    <p>Descripcion:</p>
+    <input type="text" placeholder="Descripcion aqui..." id="descripcion" class="input-style" style="width: 30%;">
+
+    <br>
+
+    <p>Texto al votar:</p>
+    <input type="text" placeholder="Texto aqui..." id="textoalvotar" class="input-style" style="width: 30%;">
+
+    <br>
+
+    <p>Texto al intentar votar dos veces:</p>
+    <input type="text" placeholder="Texto aqui..." id="textoalintentar" class="input-style" style="width: 30%;">
+
+    <br>
+
+    <p>Tipo de grafica:</p>
+    <form id="chartForm">
+        <label>
+          <input type="radio" name="chartType" value="doughnut" checked>
+          Dona
+        </label>
+        <label>
+          <input type="radio" name="chartType" value="bar">
+          Barra
+        </label>
+        <label>
+          <input type="radio" name="chartType" value="line">
+          Linea
+        </label>
+        <label>
+          <input type="radio" name="chartType" value="radar">
+          Radar
+        </label>
+        <label>
+          <input type="radio" name="chartType" value="pie">
+          Pastel
+        </label>
+        <label>
+          <input type="radio" name="chartType" value="polarArea">
+          Area polar
+        </label>
+    </form>
+
+    <canvas id="myChart" class="dcanvas"></canvas>
+
+    <br>
+    <br>
+
+    <button class="menu-button" onclick="submitConfigs();">Votar</button>
+    <button class="menu-button" onclick="guardarEleccion(false);">Guardar</button>
+    <button class="menu-button" onclick="window.location.href='Menu.html';">Volver al menu</button>
+
+    <script src="../source/scripts/Crear_Eleccion_script.js"></script>
+
+</body>
+
+</html>

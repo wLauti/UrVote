@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'NormalFont';
+    src: url('../../Assets/fonts/NormalFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('../../Assets/fonts/LogoFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: "NormalFont", sans-serif;
+    zoom: 110%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+    margin-top: 5px;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(182, 182, 182) 50%, rgb(155, 155, 155) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.menu-button {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+    margin: 0.5em;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #ececec, 0 0.0625em 0 0 #efefef, 0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede, 0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    margin-bottom: 30px;
+}
+
+.menu-button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef, 0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede, 0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+.add-button {
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    width: 250px;
+    height: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card .party-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.card .roles {
+    color: #666;
+    margin-top: 10px;
+}
+
+.card button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #c0392b;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card input[type="text"] {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.input-style {
+    font-family: "NormalFont", sans-serif;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    zoom: 150%;
+}
+
+.input-style:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-style-a {
+    font-family: "NormalFont", sans-serif;
+    padding: 100px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+.input-style-a:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#myChart {
+    max-width: 400px;
+    max-height: 400px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+
+.dcanvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}

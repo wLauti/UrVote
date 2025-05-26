@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrVote</title>
+
+    <link rel="stylesheet" href="../Source/Stylesheets/Seleccionar_Seguridad_stylesheet.css">
+
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <h1>Seleccionar medio de seguridad</h1>
+    <p>Al terminar de votar, se necesita que alguien desbloquee el sistema de votaciones. Esto se hace para que nadie pueda votar dos veces.</p>
+
+    <div class="medios">
+
+        <button class="menu-button" onclick="nav('Desbloqueo_Tecla.html')">
+
+            <img src="../assets/media/Key.svg" alt="" height="200">
+            <h1>Desbloqueo por tecla</h1>
+            <p>Se configura una tecla para que al apretarla se desbloquee el sistema.</p>
+
+        </button>
+
+        <!--<button class="menu-button" onclick="methodDevice();">
+
+            <img src="../assets/media/Phone.svg" alt=""height="200">
+            <h1>Desbloqueo por celular</h1>
+            <p>Se desbloquea el sistema por medio de una aplicacion en el telefono. Es necesario estar conectado a la misma red que el dispositivo.</p>
+
+        </button>-->
+
+        <button class="menu-button" onclick="methodNil();">
+
+            <img src="../assets/media/Unlocked.svg" alt=""height="200">
+            <h1>Sin medio de seguridad</h1>
+            <p>Sin ninguna barrera de seguridad.</p>
+
+        </button>
+        
+    </div>
+
+    <br>
+    
+    <p>Esto no se guardara en la configuracion de la eleccion, en el caso de tener guardada la eleccion, podras volver a elegir el metodo.</p>
+
+    <script src="../Source/Scripts/Seleccionar_Seguridad_script.js"></script>
+
+</body>
+
+</html>

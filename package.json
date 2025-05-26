@@ -1,0 +1,60 @@
+{
+    "name": "urvote",
+    "version": "1.1.7",
+    "description": "La mejor app de votaciones.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "compile": "electron-builder",
+        "rebuild": "electron-rebuild"
+    },
+    "author": "CivicCode",
+    "license": "MIT",
+    "devDependencies": {
+        "@electron/rebuild": "^3.7.1",
+        "electron": "^26.6.10",
+        "electron-build": "^0.0.3",
+        "electron-builder": "^24.13.3",
+        "electron-rebuild": "^3.2.9"
+    },
+    "dependencies": {
+        "bonjour": "^3.5.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "sqlite3": "^5.1.7",
+        "sweetalert2": "^11.16.1"
+    },
+    "build": {
+        "appId": "com.civiccode.urvote",
+        "productName": "UrVote",
+        "directories": {
+            "output": "Compiled-App"
+        },
+    "files": [
+        "**/*",
+        "!Compiled-App",
+        "!Changelog.md",
+        "node_modules/sqlite3"
+        ],
+        "win": {
+            "target": "nsis",
+            "icon": "assets/logos/urvote/Logo.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
